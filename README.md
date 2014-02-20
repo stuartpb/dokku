@@ -72,6 +72,10 @@ To avoid the need to type the `-t` option each time, simply create/modify a sect
     Host progriumapp.com
     RequestTTY yes
 
+If you want a client-side command you can run to automatically run a command
+against the server based on your `dokku` remote, similar to the Heroku
+Toolbelt, check out dokku-client.sh in the "contrib" directory.
+
 ## Run a command in the app environment
 
 It's possible to run commands in the environment of the deployed application:
@@ -98,8 +102,8 @@ Typically an application will require some environment variables to run properly
 
 The `config` plugin provides the following commands to manage your variables:
 ```
-config <app> - display the config vars for an app  
-config:get <app> KEY - display a config value for an app  
+config <app> - display the config vars for an app
+config:get <app> KEY - display a config value for an app
 config:set <app> KEY1=VALUE1 [KEY2=VALUE2 ...] - set one or more config vars
 config:unset <app> KEY1 [KEY2 ...] - unset one or more config vars
 ```
@@ -149,7 +153,7 @@ Looking to keep codebase as simple and hackable as possible, so try to keep your
 
  * **Multi-host.** Not a huge leap, but this isn't the project for it. Have a look at [Flynn](https://flynn.io/).
  * **Multitenancy.** It's ready for it, but again, have a look at [Flynn](https://flynn.io/).
- * **Client app.** Given the constraints, running commands remotely via SSH is fine.
+ * **Client API.** Given the constraints, running commands remotely via SSH is fine.
 
 ## License
 
